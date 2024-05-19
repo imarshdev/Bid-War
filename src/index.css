@@ -1,0 +1,114 @@
+@font-face {
+  font-family: lora;
+  src: url(/src/assets/Candarab.ttf);
+}
+@font-face {
+  font-family: lora2;
+  src: url(/src/assets/JosefinSans-Regular.ttf);
+}
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 95dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: lora;
+  color: #135d66;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1,
+span {
+  font-family: lora2;
+  font-weight: lighter;
+  cursor: pointer;
+}
+h4,
+h6 {
+  font-family: lora;
+}
+p {
+  margin: 0 10px;
+  font-family: lora;
+}
+button {
+  min-height: 3rem;
+  min-width: 10rem;
+  color: #fff;
+  padding: 0 20px;
+  border-radius: 5px;
+  background-color: #135d66;
+  border: solid 0.01px #a8cd9f;
+  transition: transform 1s;
+}
+input {
+  background-color: transparent;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+.form {
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  width: 20rem;
+  height: 2rem;
+  font-family: lora;
+  padding-left: 10px;
+  font-size: 1rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid black 0.5px;
+}
+.input:focus {
+  outline: none;
+}
+.open {
+  background-color: #135c6600;
+  color: #135d66;
+  font-family: lora;
+  font-size: 1rem;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: 90%;
+    height: 90%;
+  }
+  .page {
+    width: 98%;
+  }
+}

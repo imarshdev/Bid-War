@@ -1,0 +1,138 @@
+/* navigation-side-bar */
+.sidebar {
+  width: 5%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-links {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.active {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  transform: scale(1.1);
+}
+.not-active {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.not-active:hover {
+  transform: scale(1.1);
+}
+.not-active span {
+  display: none;
+}
+/* middle-main-body */
+.body-wrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.top-bar {
+  width: 98%;
+  height: 10%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+  position: relative;
+}
+.topper {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.search-bar {
+  width: 40%;
+  height: 70%;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#search-input {
+  width: 90%;
+  margin-left: 10px;
+  border-bottom-color: #135d6650;
+}
+.top-right-bar-container {
+  display: flex;
+}
+.options {
+  width: 40px;
+  height: 40px;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bids {
+  width: 100%;
+  height: 90%;
+}
+.content-container {
+  width: 100%;
+  height: 100%;
+}
+/* right-side-bar */
+.right-sidebar {
+  width: 5%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* lets not forget mobile */
+@media screen and (max-width: 600px) {
+  .body-wrapper {
+    width: 100%;
+  }
+  .container-one {
+    height: 100dvh;
+  }
+  .top-bar {
+    width: 100%;
+    padding: 0 1%;
+    justify-content: space-around;
+  }
+  .topper {
+    display: none;
+  }
+  .search-bar {
+    width: 60%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .bids {
+    width: 100%;
+  }
+  .right-sidebar {
+    display: none;
+  }
+}
