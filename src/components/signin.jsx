@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
-  const [userName, setUserName] = useState('')
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate()
 
-  const handleName = (event) => {
-    setUserName(event.target.value);
-  }
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(userName);
-  }
-
+    axios
+      .post("http://localhost:3001/login", { name, password })
+      .then((result) => {
+        console.log(result);
+        if (result.data === "success") {
+          console.log("Login Success");
+          navigate("/home")
+        } else {
+          alert("incorrect password, Please try again");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="form">
@@ -21,26 +30,28 @@ function SignIn() {
         <input
           className="input"
           type="text"
-          value={userName}
-          onChange={handleName}
+          onChange={(event) => setName(event.target.value)}
           style={{ width: "20rem", height: "2rem" }}
           autoFocus
+          required
         />
         <br />
         <br />
         <br />
-        <label>Enter PassCode</label>
+        <label>
+          <strong>Enter PassWord</strong>
+        </label>
         <input
           className="input"
           type="password"
+          onChange={(event)=> setPassword(event.target.value)}
           style={{ width: "20rem", height: "2rem" }}
+          required
         />
         <br />
         <br />
         <br />
-        <Link to="/home">
-          <button type="submit">Submit</button>
-        </Link>
+          <button type="submit">Enter</button>
       </form>
     </div>
   );
