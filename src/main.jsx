@@ -5,9 +5,8 @@ import "./index.css";
 import Landing from "./components/landing.jsx";
 import SignIn from "./components/signin.jsx";
 import SignUp from "./components/signup.jsx";
-import MainPage from "./components/mainpage.jsx";
+import Home from "./components/pages/home.jsx";
 import NotFond from "./components/notfound.jsx";
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="landing" element={<Landing />} />
         <Route path="signin" element={<SignIn/>} />
         <Route path="signup" element={<SignUp/>} />
-        <Route path="home" element={<MainPage />} />
+        <Route path="home" element={<Home />} />
         <Route path="notfound" element={<NotFond/>} />
       </Routes>
     </BrowserRouter>
